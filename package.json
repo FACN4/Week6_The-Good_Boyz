@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "## Project Overview This week's project will involve setting up a database which you connect to via a node.js server. You'll use your data to make a dynamic web app for your front-end.",
   "main": "index.js",
-  "dependencies": {
-    "eslint-config-airbnb": "^17.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint": "^5.3.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
     "nodemon": "^1.18.3",
     "nyc": "^12.0.2",
     "tap-spec": "^5.0.0",
