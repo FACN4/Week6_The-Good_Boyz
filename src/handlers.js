@@ -30,8 +30,8 @@ const handlerPublic = (req, res, url) => {
     jpg: "image/jpg",
     gif: "image/gif"
   };
-    pathfile = path.join(__dirname, "..", "public", url);
-  }
+  pathfile = path.join(__dirname, "..", "public", url);
+
   fs.readFile(pathfile, (err, file) => {
     if (err) {
       handler500(res);
