@@ -13,3 +13,7 @@ This week's project will involve setting up a database which you connect to via 
 - [ ] Content dynamic, but DOM manipulation kept to a minimum
 - [ ] Mobile-first design
 - [ ] Clear user journey (even if you take one of our suggested ideas, document the user journey in your readme)
+
+### DataBase Schema
+
+![alt text](https://files.gitter.im/foundersandcoders/BAD_BOYS_DB/sD2u/Untitled-Diagram.png)
