@@ -1,6 +1,7 @@
 # Week6_The-Good_Boyz
 
-
+## Project Overview
+This week's project will involve setting up a database which you connect to via a node.js server. You'll use your data to make a dynamic web app for your front-end.
 
 ### Requirements
 - [ ] Simple web app with a node server and a database
