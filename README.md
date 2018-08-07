@@ -14,6 +14,9 @@ This week's project will involve setting up a database which you connect to via 
 - [ ] Mobile-first design
 - [ ] Clear user journey (even if you take one of our suggested ideas, document the user journey in your readme)
 
+### User Journey
+A site for reviewing movies for film fans. Visitors will be able to search for any movie, read a summary of it and view the poster, and leave a review (out of 5 stars) and/or leave a comment.
+
 ### DataBase Schema
 
 ![alt text](https://files.gitter.im/foundersandcoders/BAD_BOYS_DB/sD2u/Untitled-Diagram.png)
