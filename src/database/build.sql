@@ -19,4 +19,9 @@ CREATE TABLE movies (
   name VARCHAR(100)
 );
 
+CREATE TABLE user_movie_review(
+  id SERIAL PRIMARY KEY,
+  text TEXT NOT NULL,
+);
+
 COMMIT;
