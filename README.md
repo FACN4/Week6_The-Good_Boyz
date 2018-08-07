@@ -17,3 +17,6 @@ This week's project will involve setting up a database which you connect to via 
 ### DataBase Schema
 
 ![alt text](https://files.gitter.im/foundersandcoders/BAD_BOYS_DB/sD2u/Untitled-Diagram.png)
+
+### Software Architecture
+![alt text](https://files.gitter.im/foundersandcoders/BAD_BOYS_DB/dvmF/Untitled-Diagram-_2_.png)
