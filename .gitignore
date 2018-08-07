@@ -1,6 +1,6 @@
-/node_modules
+node_modules
 /package-lock.json
-/src/.env
+config.env
 /.nyc_output
 /coverage
 /coverage.lcov
