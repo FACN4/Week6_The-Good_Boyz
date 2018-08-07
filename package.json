@@ -1,0 +1,32 @@
+{
+  "name": "week6_the-good_boyz",
+  "version": "1.0.0",
+  "description": "## Project Overview This week's project will involve setting up a database which you connect to via a node.js server. You'll use your data to make a dynamic web app for your front-end.",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-airbnb": "^17.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "nodemon": "^1.18.3",
+    "nyc": "^12.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  },
+  "scripts": {
+    "go": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test": "nyc tape tests/tests.js | tap-spec",
+    "coverage": "nyc --reporter=lcov npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN4/Week6_The-Good_Boyz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN4/Week6_The-Good_Boyz/issues"
+  },
+  "homepage": "https://github.com/FACN4/Week6_The-Good_Boyz#readme"
+}
