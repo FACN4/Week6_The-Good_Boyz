@@ -29,7 +29,9 @@ let moviesInfoContainer = document.getElementById("movieInfo")
 
 //Search films event
 function appendSearchResults(res){
-  console.log(JSON.parse(res))
+
+  // console.log(JSON.parse(JSON.parse(res))["results"])
+  // console.log(Object.entries(res));
   //create object of the movie data from the string
   let resObj = JSON.parse(res);
   //deconstruct the object

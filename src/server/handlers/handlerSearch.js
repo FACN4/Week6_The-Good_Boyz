@@ -20,8 +20,10 @@ const handler_Search = (req, res) => {
       console.log(error);
       return;
     }
-    filmObj = body[results][0];
-    res.end(JSON.stringify(filmObj));
+    console.log(body["results"]);
+    filmObj = body;
+
+    res.end(filmObj);
   });
 };
 
