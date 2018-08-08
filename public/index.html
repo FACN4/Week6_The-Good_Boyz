@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <input aria-label ='movieSearch' required id="search" type="text" name = 'movieSearch' placeholder="Search" list="suggestion">
+  <input  class="input" aria-label ='movieSearch' required id="search" type="text" name = 'movieSearch' placeholder="Search" list="suggestion">
   <button type="button" name="movieSearchbtn" onclick = 'searchMovie()'>Search</button>
   <datalist id="suggestion">
     <option value="The Shawshank Redemption"></option>
@@ -38,24 +38,34 @@
 
   <div id="filminfo">
     <h3>Film summary</h3>
-    <p id="filminfoPARAGRAPH"> this is the film info
+    <p id="filminfoPARAGRAPH">
+      this is the film info
     </p>
   </div>
 
 
     <h2>Add review</h2>
-    <input type="text" name="username" value=""
+    <div id="review">
+
+
+
+  <input class="input" type="text" name="username" value=""
     id="userName" placeholder="userName">
-    <input type="text" name="userReview" value="" id="userReview" placeholder="userReview">
+
+    <input class="input" type="text" name="userReview" value=""
+    id="userReview" placeholder="userReview">
+
+  </div>
 
 
-  <div id="reviews">
-    <h2>Film reviews</h2>
+  <div id="Rating">
+    <h2>Film Rating</h2>
 
 
 
 
-    <input type="text" name="" value="" input="" id="userRating" placeholder="userRating" list="Rating">
+    <input class="input" type="text" name="" value="" input="" id="userRating"
+     placeholder="userRating" list="Rating">
     <datalist id="Rating">
       <option value="1"></option>
       <option value="2"></option>
