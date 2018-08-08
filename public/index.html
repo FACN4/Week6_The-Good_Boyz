@@ -9,8 +9,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Film reviews</h1>
-  
+
+  <input aria-label ='movieSearch' required id="search" type="text" name = 'movieSearch' placeholder="Search" list="suggestion">
+  <button type="button" name="movieSearchbtn">Search</button>
+  <div id="poster">
+    <img src="https://yts.am/assets/images/movies/Payback_1999/medium-cover.jpg" alt="">
+    <div ="rating">
+    </div>
+  </div>
+  <div id="filminfo">
+  </div>
+
+  <div id="reviews">
+    <h2>Film reviews</h2>
+    <input type="text" name="username" value=""
+    id="userName" >
+    <input type="text" name="userReview" value="" id="userReview">
+    <input type="text" name="" value="" input="" id="userRating">
+    <button type="button" name="button" id="submitReview" >Submit</button>
+
+  </div>
+
+
+
   <script src="films.js"></script>
   <script src="dom.js"></script>
 </body>
