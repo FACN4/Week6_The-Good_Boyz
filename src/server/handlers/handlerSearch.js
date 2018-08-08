@@ -7,23 +7,27 @@ const handler_Search = (req, res) => {
   console.log(req.url);
   const query = req.url.split("=")[1];
   // const queryForDB = query.split("+").join(" ");
-  // var rating = getData(queryForDB);
-  // let resObj = {
-  //   moviePoster: "",
-  //   movieName: "",
-  //   movieYear: "",
-  //   movieRating: "",
-  //   movieInfo: ""
-  // };
+  let resObj = {
+    moviePoster: "",
+    movieName: "",
+    movieYear: "",
+    movieRating: "",
+    movieInfo: ""
+  };
   httpReq(query, (error, body) => {
     if (error) {
       console.log(error);
       return;
     }
-    console.log(body["results"]);
-    filmObj = body;
-
-    res.end(filmObj);
+    let movieObj = JSON.parse(body).results[0];
+    resObj.moviePoster =
+      "http://image.tmdb.org/t/p/w500" + movieObj.poster_path;
+    resObj.movieName = movieObj.title;
+    resObj.movieYear = movieObj.release_date;
+    resObj.movieInfo = movieObj.overview;
+    resObj.movieRating = "3";
+    resObj = JSON.stringify(resObj);
+    res.end(resObj);
   });
 };
 
