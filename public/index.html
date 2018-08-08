@@ -18,9 +18,7 @@
     <option value="The Godfather"></option>
   </datalist>
   <div class="main">
-
     <div id="left">
-
       <div id="poster">
         <img id="moviePoster"src="https://yts.am/assets/images/movies/Payback_1999/medium-cover.jpg" alt="">
         <div id ="rating">
@@ -31,27 +29,25 @@
       <div id="movieName">
         <p id="year"> 2000</p>
       </div>
-      <div>
-        <h3>Film summary</h3>
+      <div class = 'movieInfo'>
         <p id="movieInfo"> </p>
       </div>
-
-
-        <h2>Add review</h2>
+      <div class = 'reviewBox'>
+        <h4>Add review</h4>
         <input type="text" name="username" value=""
         id="userName" placeholder="userName">
         <input type="text" name="userReview" value="" id="userReview" placeholder="userReview">
-      <div id="reviews">
-        <h2>Film reviews</h2>
-        <input type="text" name="" value="" input="" id="userRating" placeholder="userRating" list="Rating">
-        <datalist id="Rating">
-          <option value="1"></option>
-          <option value="2"></option>
-          <option value="3"></option>
-          <option value="4"></option>
-          <option value="5"></option>
-        </datalist>
-        <button type="button" name="button" id="submitReview" >Submit</button>
+        <div id="reviews">
+          <input type="text" name="" value="" input="" id="userRating" placeholder="userRating" list="Rating">
+          <datalist id="Rating">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+          </datalist>
+          <button type="button" name="button" id="submitReview" >Submit</button>
+        </div>
       </div>
     </div>
 </div>

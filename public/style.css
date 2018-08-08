@@ -6,9 +6,7 @@ body {
 #searchBar {
   padding-bottom: 60px;
 }
-img {
-  width: 100%;
-}
+
 .main{
   position: relative;
   margin: auto;
@@ -18,8 +16,29 @@ img {
   outline-color: black;
   outline-width: 5px;
   outline-style: solid;
+  background-color: rgb(222, 237, 219);
+}
+#moviePoster {
+  width: 100%;
+}
+#rating {
+  position:absolute;
+  top:10px;
+  left: 10px;
+  background-color: yellow  ;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.movieInfo{
+  background-color: ;
+}
+.reviewBox{
   background-color: darkgray;
 }
+
+
 
 /* Mobile */
 @media only screen and (max-width: 600px) {
