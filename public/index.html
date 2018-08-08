@@ -16,24 +16,58 @@
     <option value="The Shawshank Redemption"></option>
     <option value="The Godfather"></option>
   </datalist>
+  <div class="main">
+
+<div id="left">
+
   <div id="poster">
-    <img src="https://yts.am/assets/images/movies/Payback_1999/medium-cover.jpg" alt="">
+    <img id="moviePoster"src="https://yts.am/assets/images/movies/Payback_1999/medium-cover.jpg" alt="">
     <div ="rating">
     </div>
   </div>
-  <div id="filminfo">
+  </div>
+  <div class="right">
+
+  <div id="movieName">
+   movieNames
+   <p id="year">
+   2000
+   </p>
   </div>
 
-  <div id="reviews">
-    <h2>Film reviews</h2>
+
+  <div id="filminfo">
+    <h3>Film summary</h3>
+    <p id="filminfoPARAGRAPH"> this is the film info
+    </p>
+  </div>
+
+    <h2>Add review</h2>
     <input type="text" name="username" value=""
     id="userName" placeholder="userName">
     <input type="text" name="userReview" value="" id="userReview" placeholder="userReview">
-    <input type="text" name="" value="" input="" id="userRating" placeholder="userRating">
+
+
+  <div id="reviews">
+    <h2>Film reviews</h2>
+
+
+
+
+    <input type="text" name="" value="" input="" id="userRating" placeholder="userRating" list="Rating">
+    <datalist id="Rating">
+      <option value="1"></option>
+      <option value="2"></option>
+      <option value="3"></option>
+      <option value="4"></option>
+      <option value="5"></option>
+
+    </datalist>
     <button type="button" name="button" id="submitReview" >Submit</button>
-
   </div>
+</div>
 
+</div>
 
 
   <script src="films.js"></script>

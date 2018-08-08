@@ -14,7 +14,7 @@ function reviewSuccessful(res){
 function searchSuccessful(res){
   let resObj = JSON.parse(res);
   let moviePoster = resObj.moviePoster;
-  let movieName = resObj.moviesName;
+  let movieName = resObj.movieName;
   let movieYear = resObj.movieYear;
   let movieRating = resObj.movieRating;
   let moviesInfo = resObj.movieInfo;
