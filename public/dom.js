@@ -1,30 +1,54 @@
+//INPUT FIELDS
 let userName = document.getElementById("userName").value;
 let userReview = document.getElementById("userReview").value;
 let userRating = document.getElementById("userRating").value;
 let userSearch = document.getElementById("search").value;
 
-function reviewSuccessful(res){
-  if (res){
-    userName = '';
-    userReview = '';
-    rating = '';
-  }
-}
+//CONTAINERS FOR THE FILM INFO
+let posterContainer = document.getElementById("poster")
+let movieNameContainer = document.getElementById("movieName")
+let movieYearContainer = document.getElementById("year")
+let movieRatingContainer = document.getElementById("rating")
+let moviesInfoContainer = document.getElementById("movieInfo")
 
-function searchSuccessful(res){
+
+//Submit review event
+// function reviewSuccessfu(res){
+//   if (res = 'success'){
+//     userName = '';
+//     userReview = '';
+//     rating = '';
+//   }
+// }
+// function submitReview() {
+//   let query = "/review?q=" + userName + "_" + movieNameContainer.textContent + "_" + userReview "_" + userRating;
+//   xhrAPI(query, reviewSuccessful);
+// }
+
+
+
+//Search films event
+function appendSearchResults(res){
+
+  // console.log(JSON.parse(JSON.parse(res))["results"])
+  // console.log(Object.entries(res));
+  //create object of the movie data from the string
   let resObj = JSON.parse(res);
+  //deconstruct the object
   let moviePoster = resObj.moviePoster;
   let movieName = resObj.movieName;
   let movieYear = resObj.movieYear;
   let movieRating = resObj.movieRating;
   let moviesInfo = resObj.movieInfo;
+  //append the data to the html
+  posterContainer.src = moviePoster;
+  movieNameContainer.textContent = movieName;
+  movieYearContainer.textContent = movieYear;
+  movieRatingContainer.textContent = movieRating;
+  moviesInfoContainer.textContent = moviesInfo;
 }
-function submitReview() {
-  let query = "/review?q=" + userName + "_" + userReview "_" + rating;
-  xhrAPI(query, reviewSuccessful);
-}
-
 function searchMovie() {
+    let userSearch = document.getElementById("search").value;
     let query = "/search?q=" + userSearch.split(' ').join('+');
-    xhrAPI(query, searchSuccessful);
+    xhrAPI(query, appendSearchResults);
 }
