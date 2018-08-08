@@ -36,7 +36,7 @@ function appendSearchResults(res){
   let resObj = JSON.parse(res);
   //deconstruct the object
   let moviePoster = resObj.moviePoster;
-  let movieName = resObj.moviesName;
+  let movieName = resObj.movieName;
   let movieYear = resObj.movieYear;
   let movieRating = resObj.movieRating;
   let moviesInfo = resObj.movieInfo;
