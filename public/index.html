@@ -11,7 +11,7 @@
 <body>
 
   <input aria-label ='movieSearch' required id="search" type="text" name = 'movieSearch' placeholder="Search" list="suggestion">
-  <button type="button" name="movieSearchbtn">Search</button>
+  <button type="button" name="movieSearchbtn" onclick = 'searchMovie()'>Search</button>
   <datalist id="suggestion">
     <option value="The Shawshank Redemption"></option>
     <option value="The Godfather"></option>
@@ -30,13 +30,14 @@
     id="userName" >
     <input type="text" name="userReview" value="" id="userReview">
     <input type="text" name="" value="" input="" id="userRating">
-    <button type="button" name="button" id="submitReview" >Submit</button>
+    <button type="button" name="button" id="submitReview" onclick = "submitReview()" >Submit</button>
 
   </div>
 
 
 
-  <script src="films.js"></script>
+  <!-- <script src="films.js"></script> -->
+  <script src="xhr.js"></script>
   <script src="dom.js"></script>
 </body>
 
