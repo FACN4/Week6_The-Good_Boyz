@@ -1,23 +1,57 @@
 #userReview{
   padding: 40px 15px 40px 15px;
+  margin-top: 8px;
+}
+#review{
+  display: flex;
+  flex-direction: column;
 }
 body{
-  padding-top:15px; 
+  padding-top:15px;
   text-align: center;
+
 }
+#poster{
+  justify-content: center;
+  align-items: center;
+}
+.input{
+  display: inline-block;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
 
-
+}
 
 
 @media only screen and (min-width: 600px) {
   #userReview{
     padding: 40px 15px 40px 15px;
+
   }
   .main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
   }
+  .input{
+    display: inline-block;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       box-sizing: border-box;
 
+  }
+#review{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#userReview{
+  width: 100%;
+}
+#userName{
+  width:60%
+}
 
 }
