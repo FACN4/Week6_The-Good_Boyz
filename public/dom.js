@@ -46,6 +46,7 @@ function appendSearchResults(res){
   moviesInfoContainer.textContent = moviesInfo;
 }
 function searchMovie() {
+    let userSearch = document.getElementById("search").value;
     let query = "/search?q=" + userSearch.split(' ').join('+');
     xhrAPI(query, appendSearchResults);
 }
