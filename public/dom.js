@@ -9,7 +9,7 @@ let posterContainer = document.getElementById("poster")
 let movieNameContainer = document.getElementById("movieName")
 let movieYearContainer = document.getElementById("year")
 let movieRatingContainer = document.getElementById("rating")
-let moviesInfoContainer = document.getElementById("movieInfo")
+let movieInfoContainer = document.getElementById("movieInfo")
 
 
 //Submit review event
@@ -30,10 +30,10 @@ let moviesInfoContainer = document.getElementById("movieInfo")
 //Search films event
 function appendSearchResults(res){
 
-  // console.log(JSON.parse(JSON.parse(res))["results"])
+  console.log(">>>>>>>DOM APPEND\n" +typeof JSON.parse(JSON.parse(res)));
   // console.log(Object.entries(res));
   //create object of the movie data from the string
-  let resObj = JSON.parse(res);
+  let resObj = JSON.parse(JSON.parse(res));
   //deconstruct the object
   let moviePoster = resObj.moviePoster;
   let movieName = resObj.movieName;
@@ -45,7 +45,7 @@ function appendSearchResults(res){
   movieNameContainer.textContent = movieName;
   movieYearContainer.textContent = movieYear;
   movieRatingContainer.textContent = movieRating;
-  moviesInfoContainer.textContent = moviesInfo;
+  movieInfoContainer.textContent = moviesInfo;
 }
 function searchMovie() {
     let userSearch = document.getElementById("search").value;
