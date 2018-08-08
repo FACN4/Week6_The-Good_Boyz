@@ -29,7 +29,9 @@ let moviesInfoContainer = document.getElementById("movieInfo")
 
 //Search films event
 function appendSearchResults(res){
-  console.log(JSON.parse(res))
+
+  // console.log(JSON.parse(JSON.parse(res))["results"])
+  // console.log(Object.entries(res));
   //create object of the movie data from the string
   let resObj = JSON.parse(res);
   //deconstruct the object
@@ -46,6 +48,7 @@ function appendSearchResults(res){
   moviesInfoContainer.textContent = moviesInfo;
 }
 function searchMovie() {
+    let userSearch = document.getElementById("search").value;
     let query = "/search?q=" + userSearch.split(' ').join('+');
     xhrAPI(query, appendSearchResults);
 }
