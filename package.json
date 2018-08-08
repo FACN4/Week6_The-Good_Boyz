@@ -2,8 +2,10 @@
   "name": "week6_the-good_boyz",
   "version": "1.0.0",
   "description": "## Project Overview This week's project will involve setting up a database which you connect to via a node.js server. You'll use your data to make a dynamic web app for your front-end.",
-  "main": "index.js",
-  "dependencies": {},
+  "main": "dom.js",
+  "dependencies": {
+    "path": "^0.12.7"
+  },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
@@ -15,8 +17,8 @@
     "tape": "^4.9.1"
   },
   "scripts": {
-    "go": "nodemon src/server.js",
-    "start": "node src/server.js",
+    "go": "nodemon src/server/server.js",
+    "start": "node src/server/server.js",
     "test": "nyc tape tests/tests.js | tap-spec",
     "coverage": "nyc --reporter=lcov npm run test"
   },
