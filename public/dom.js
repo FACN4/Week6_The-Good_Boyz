@@ -5,7 +5,7 @@ let userRating = document.getElementById("userRating").value;
 let userSearch = document.getElementById("search").value;
 
 //CONTAINERS FOR THE FILM INFO
-let posterContainer = document.getElementById("poster")
+let posterContainer = document.getElementById("moviePoster")
 let movieNameContainer = document.getElementById("movieName")
 let movieYearContainer = document.getElementById("year")
 let movieRatingContainer = document.getElementById("rating")
@@ -30,10 +30,11 @@ let movieInfoContainer = document.getElementById("movieInfo")
 //Search films event
 function appendSearchResults(res){
 
-  console.log(">>>>>>>DOM APPEND\n" +typeof JSON.parse(JSON.parse(res)));
+
   // console.log(Object.entries(res));
   //create object of the movie data from the string
   let resObj = JSON.parse(JSON.parse(res));
+  console.log(resObj);
   //deconstruct the object
   let moviePoster = resObj.moviePoster;
   let movieName = resObj.movieName;

@@ -1,24 +1,31 @@
-#userReview{
-  padding: 40px 15px 40px 15px;
+/* Desktop first */
+body {
+  text-align: center;
+}
+
+#searchBar {
+  padding-bottom: 60px;
+}
+img {
+  width: 100%;
 }
 .main{
+  position: relative;
+  margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr  ;
-
+  grid-template-columns: 1fr 1fr;
+  max-width: 500px;
+  outline-color: black;
+  outline-width: 5px;
+  outline-style: solid;
+  background-color: darkgray;
 }
 
-
-
-
-
+/* Mobile */
 @media only screen and (max-width: 600px) {
-  #userReview{
-    padding: 40px 15px 40px 15px;
-  }
   .main{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
+    grid-template-columns: 1fr;
+    max-width: 250px;
   }
 
 
