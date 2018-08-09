@@ -6,7 +6,8 @@ const getdata = require("../queries/getData");
 const handler_Search = (req, res) => {
   console.log(req.url);
   const query = req.url.split("=")[1];
-  // const queryForDB = query.split("+").join(" ");
+  const queryForDB = query.split("+").join(" ");
+  console.log((">>>>>>>>>>>>QUERYFORDB HANDLER SEARCH \n"+ queryForDB));
   let resObj = {
     moviePoster: "",
     movieName: "",
@@ -25,9 +26,20 @@ const handler_Search = (req, res) => {
     resObj.movieName = movieObj.title;
     resObj.movieYear = movieObj.release_date;
     resObj.movieInfo = movieObj.overview;
-    resObj.movieRating = "3";
-    resObj = JSON.stringify(resObj);
-    res.end(resObj);
+      getdata(queryForDB,(err,result1)=>{
+      if (err){
+        console.log(err);
+      }else{
+        let result =result1[0]["coalesce"];
+        result = result.substring(0,3);
+        
+         resObj.movieRating=result;
+         resObj = JSON.stringify(resObj);
+         res.end(resObj);
+
+      }
+    });
+
   });
 };
 
