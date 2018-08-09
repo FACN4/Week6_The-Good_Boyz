@@ -1,6 +1,9 @@
 # Week6_The-Good_Boyz
 Please clone and review locally. Heroku isn't working for some reason.
 
+git clone git@github.com:FACN4/Week6_The-Good_Boyz.git
+npm run go 
+
 https://git.heroku.com/fac-film-reviews.git
 
 ## Project Overview
