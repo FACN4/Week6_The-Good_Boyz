@@ -3,7 +3,7 @@ let userName = document.getElementById("userName").value;
 let userReview = document.getElementById("userReview").value;
 let userRating = document.getElementById("userRating").value;
 let userSearch = document.getElementById("search").value;
-
+let searchBar =  document.getElementById("search");
 //CONTAINERS FOR THE FILM INFO
 let posterContainer = document.getElementById("moviePoster")
 let movieNameContainer = document.getElementById("movieName")
@@ -30,8 +30,8 @@ let movieInfoContainer = document.getElementById("movieInfo")
 //Search films event
 function appendSearchResults(res){
   //create object of the movie data from the string
-  let resObj = JSON.parse(JSON.parse(res));
-  console.log(resObj);
+  let resObj = (res);
+
   //deconstruct the object
   let moviePoster = resObj.moviePoster;
   let movieName = resObj.movieName;
@@ -49,4 +49,5 @@ function searchMovie() {
     let userSearch = document.getElementById("search").value;
     let query = "/search?q=" + userSearch.split(' ').join('+');
     xhrAPI(query, appendSearchResults);
+    searchBar.value="";
 }
