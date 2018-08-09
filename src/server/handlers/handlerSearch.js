@@ -7,18 +7,18 @@ const handler_Search = (req, res) => {
   console.log(req.url);
   const query = req.url.split("=")[1];
   // const queryForDB = query.split("+").join(" ");
-  let resObj = {
-    moviePoster: "",
-    movieName: "",
-    movieYear: "",
-    movieRating: "",
-    movieInfo: ""
-  };
   httpReq(query, (error, body) => {
     if (error) {
       console.log(error);
       return;
     }
+    let resObj = {
+      moviePoster: "",
+      movieName: "",
+      movieYear: "",
+      movieRating: "",
+      movieInfo: ""
+    };
     let movieObj = JSON.parse(body).results[0];
     resObj.moviePoster =
       "http://image.tmdb.org/t/p/w500" + movieObj.poster_path;
