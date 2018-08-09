@@ -12,12 +12,12 @@ let movieRatingContainer = document.getElementById("rating")
 let movieInfoContainer = document.getElementById("movieInfo")
 
 
-//Submit review event
-// function reviewSuccessfu(res){
+// function reviewSuccessful(res){
 //   if (res = 'success'){
 //     userName = '';
 //     userReview = '';
 //     rating = '';
+//     a
 //   }
 // }
 // function submitReview() {
@@ -29,9 +29,6 @@ let movieInfoContainer = document.getElementById("movieInfo")
 
 //Search films event
 function appendSearchResults(res){
-
-
-  // console.log(Object.entries(res));
   //create object of the movie data from the string
   let resObj = JSON.parse(JSON.parse(res));
   console.log(resObj);

@@ -1,7 +1,7 @@
 const fs = require("fs");
+const connection = require("./connection");
 
 const buildDatabase = () => {
-  const connection = require("./connection");
   const sql = fs.readFileSync(`${__dirname}/build.sql`).toString();
 
   connection.query(sql, (err, result) => {

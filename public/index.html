@@ -38,7 +38,7 @@
         id="userName" placeholder="userName">
         <input type="text" name="userReview" value="" id="userReview" placeholder="userReview">
         <div id="reviews">
-          <input type="text" name="" value="" input="" id="userRating" placeholder="userRating" list="Rating">
+          <input type="number" min = "0" max = "5" name="" value="" input="" id="userRating" placeholder="userRating" list="Rating">
           <datalist id="Rating">
             <option value="1"></option>
             <option value="2"></option>
@@ -46,7 +46,7 @@
             <option value="4"></option>
             <option value="5"></option>
           </datalist>
-          <button type="button" name="button" id="submitReview" >Submit</button>
+          <button type="button" name="button" id="submitReview" onclick = 'submitReview()'>Submit</button>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 const path = require("path");
-
 const fs = require("fs");
 const error500 = require("./error500.js");
 
