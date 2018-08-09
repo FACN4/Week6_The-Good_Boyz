@@ -1,6 +1,8 @@
 # Week6_The-Good_Boyz
+Please clone and review locally. Heroku isn't working for some reason.
 
 https://git.heroku.com/fac-film-reviews.git
+
 ## Project Overview
 
 This week's project will involve setting up a database which you connect to via a node.js server. You'll use your data to make a dynamic web app for your front-end.
