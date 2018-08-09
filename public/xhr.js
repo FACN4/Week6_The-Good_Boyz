@@ -2,7 +2,7 @@ function xhrAPI(url, callback) {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function request() {
     if (xhr.readyState === 4 && xhr.status === 200) {
-      const res = JSON.stringify(xhr.responseText);
+      const res = JSON.parse(xhr.responseText);
       callback(res);
     }
   };

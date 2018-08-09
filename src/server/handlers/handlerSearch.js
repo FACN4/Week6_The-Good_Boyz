@@ -5,7 +5,14 @@ const getdata = require("../queries/getData");
 
 const handler_Search = (req, res) => {
   const query = req.url.split("=")[1];
-  // const queryForDB = query.split("+").join(" ");
+  const queryForDB = query.split("+").join(" ");
+  let resObj = {
+    moviePoster: "",
+    movieName: "",
+    movieYear: "",
+    movieRating: "",
+    movieInfo: ""
+  };
   httpReq(query, (error, body) => {
     if (error) {
       console.log(error);
@@ -24,9 +31,18 @@ const handler_Search = (req, res) => {
     resObj.movieName = movieObj.title;
     resObj.movieYear = movieObj.release_date;
     resObj.movieInfo = movieObj.overview;
-    resObj.movieRating = "3";
-    resObj = JSON.stringify(resObj);
-    res.end(resObj);
+    getdata(queryForDB, (err, result1) => {
+      if (err) {
+        console.log(err);
+      } else {
+        let result = result1[0]["coalesce"];
+        result = result.substring(0, 3);
+
+        resObj.movieRating = result;
+        resObj = JSON.stringify(resObj);
+        res.end(resObj);
+      }
+    });
   });
 };
 
