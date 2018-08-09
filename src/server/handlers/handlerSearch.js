@@ -4,7 +4,6 @@ const httpReq = require("../httpReq.js");
 const getdata = require("../queries/getData");
 
 const handler_Search = (req, res) => {
-  console.log(req.url);
   const query = req.url.split("=")[1];
   // const queryForDB = query.split("+").join(" ");
   httpReq(query, (error, body) => {
